@@ -11,151 +11,97 @@
 
 /* Hank Quinlan demo */
 
-body {
-    background-color: #eee;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+body { background-color: #eee; }
+
 @media (min-width: @tablet) {
-  body {
-    margin-top: 40px;
-  }
+  body { margin: 30px 10px; }
 }
 
-nav ul, footer ul {
-    list-style: none;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
+// nav ul, footer ul {
+//     list-style: none;
+// }
+// nav ul li, footer ul li {
+//     display: inline;
+//     margin-right: 20px;
+// }
 
-a       { text-decoration: none; }
-a:hover { text-decoration: underline; }
+a         { text-decoration: none; }
+a:hover   { text-decoration: underline; }
+a:visited { color: #00e; }
 
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
+// footer {
+//     border-top: 1px solid #d5d5d5;
+//     font-size: .8em;
+// }
 
-ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
-}
+// ul.posts {
+//     margin: 20px auto 40px;
+//     font-size: 1.5em;
+// }
 
-ul.posts li {
-    list-style: none;
-}
+// ul.posts li {
+//     list-style: none;
+// }
 
-.homepage-image {
-  width: 100%;
+#homepage-image {
   display: block;
+  width: 100%;
+}
+
+#homepage-content {
+  max-width: @tablet;
   margin: 0 auto;
 }
 
-@media (min-width: @tablet) {
-  p, h1, h2, h3, h4, h5, h6, img {
-    max-width: 640px;
-    margin: 0 auto;
-  }
+p, h1, h2, h3, img {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .homepage-image {
+p, h1, h2, h3 {
+  max-width: 480px;
+}
+
+
+@media (min-width: @tablet) {
+  #homepage-image {
     border: 5px solid #fff;
     box-shadow: 0 1px 3px #ccc;
-    width: 640px;
+  }
+
+  img {
+    max-width: 480px;
   }
 }
 
 /* TYPOGRAPHY */
 body { font-family: 'Source Sans Pro', sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Bitter', serif; }
+h1, h2, h3 { font-family: 'Bitter', serif; }
+p, h1, h2, h3 { padding: 0 10px; }
 
-#page {
-  font-size: 1em;
-  /* equivalent to 16px */
-  line-height: 1.25;
-  /* equivalent to 20px */
-}
-
-@media (min-width: @tablet) {
-  #page {
-    font-size: 1em;
-    /* equivalent to 16px */
-    line-height: 1.375;
-    /* equivalent to 22px */
-  }
-}
-
-p {
-  line-height: 1.25;
-  margin-bottom: 1em;
-}
-
-@media (min-width: @tablet) {
-  p {
-    line-height: 1.375;
-  }
-}
+#page { font-size: 1em; }
 
 h1 { line-height: 1.1; }
-h2, h3, h4, h5, h6 { line-height: 1.15; }
-h1, h2, h3, h4, h5, h6 {
+h2, h3 { line-height: 1.15;  text-align: center; }
+h1, h2, h3 {
   margin-top: .8em;
-  margin-bottom: .2em;
+  margin-bottom: .4em;
 }
+p { line-height: 1.4; margin: 0 auto 1em auto; }
 
-h1 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
-  /* tighten up 'display type' headers on smaller displays */
-}
-
-@media (min-width: @tablet) {
-  h1 {
-    font-size: 2.5em;
-    letter-spacing: normal;
-  }
-}
-
-@media (min-width: @desktop) {
-  h1 {
-    font-size: 3em;
-    letter-spacing: normal;
-  }
-}
-
-h2 {
-  font-size: 1.5em;
-}
-
-@media (min-width: @tablet) {
-  h2 {
-    font-size: 2em;
-  }
-}
-
-@media (min-width: @desktop) {
-  h2 {
-    font-size: 2.25em;
-  }
-}
-
-h3 {
-  font-size: 1.375em;
-}
-
-@media (min-width: @tablet) {
-  h3 {
-    font-size: 1.5em;
-  }
-}
-
-@media (min-width: @desktop) {
-  h3 {
-    font-size: 1.75em;
-  }
-}
-
-h4 {
+h1 { font-size: 2em; letter-spacing: -1px; }
+h2 { font-size: 1.7em; }
+h3 { font-size: 1.5em; }
+.featured {
   font-size: 1.125em;
+  line-height: 1.4;
+  margin-top: 1em;
+}
+
+@media (min-width: @tablet) {
+  h1 { font-size: 2.5em; letter-spacing: normal; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.75em; }
+  .featured { font-size: 1.3em; }
+  p  { font-size: 1.125em; }
 }
