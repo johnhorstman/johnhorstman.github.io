@@ -8,6 +8,7 @@
 /* Breakpoints */
 @tablet: 42em;
 @desktop: 56em;
+@content-width: 480px;
 
 /* Hank Quinlan demo */
 
@@ -53,20 +54,20 @@ hr {
   border-top: 1px solid #ddd;
   margin: 30px 0;
   text-align: center;
+  max-width: @content-width * 0.8;
 }
 
 footer {
   padding: 0 40px;
+
+  hr { margin-bottom: 20px; }
+
+  #contact-links { margin-bottom: 30px; }
 }
 
-#homepage-image {
+img {
   display: block;
   width: 100%;
-}
-
-#homepage-content {
-  max-width: @tablet;
-  margin: 0 auto;
 }
 
 footer, p, h1, h2, h3, img, hr, ul {
@@ -75,7 +76,7 @@ footer, p, h1, h2, h3, img, hr, ul {
 }
 
 footer, p, h1, h2, h3 {
-  max-width: 480px;
+  max-width: @content-width;
 }
 
 
@@ -83,17 +84,14 @@ footer, p, h1, h2, h3 {
   #homepage-image {
     border: 5px solid #fff;
     box-shadow: 0 1px 3px #ccc;
-  }
-
-  img {
-    max-width: 480px;
+    max-width: @content-width;
   }
 }
 
 /* TYPOGRAPHY */
 body { font-family: 'Source Sans Pro', sans-serif; }
 h1, h2, h3 { font-family: 'Bitter', serif; }
-p, h1, h2, h3 { padding: 0 10px; }
+p, h1, h2, h3 { padding: 0 20px; }
 
 #page { font-size: 1em; }
 
@@ -106,6 +104,7 @@ h1, h2, h3 {
 p { line-height: 1.5; margin: 0 auto 1em auto; }
 
 h1 { font-size: 2em; letter-spacing: -1px; }
+h1#homepage-title { font-size: 1.6em; }
 h2 { font-size: 1.6em; }
 h3 { font-size: 1.4em; }
 .featured {
@@ -115,7 +114,7 @@ h3 { font-size: 1.4em; }
 }
 
 @media (min-width: @tablet) {
-  h1 { font-size: 2.5em; letter-spacing: normal; }
+  h1, h1#homepage-title { font-size: 2.5em; letter-spacing: normal; }
   h2 { font-size: 2em; }
   h3 { font-size: 1.75em; }
   .featured { font-size: 1.3em; }
